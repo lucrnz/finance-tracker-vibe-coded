@@ -1,0 +1,13 @@
+{
+  "name": "finance-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "backend": "npm run dev -w @finance-tracker/backend",
+    "backend:build": "npm run build -w @finance-tracker/backend",
+    "backend:start": "npm run start -w @finance-tracker/backend"
+  }
+}
