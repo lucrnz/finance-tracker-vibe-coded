@@ -4,6 +4,8 @@ import { logger } from './shared/logger.js';
 import { authRouter } from './features/auth/index.js';
 import { categoriesRouter } from './features/categories/index.js';
 import { transactionsRouter } from './features/transactions/index.js';
+import { budgetsRouter } from './features/budgets/index.js';
+import { reportsRouter } from './features/reports/index.js';
 
 export const createApp = () => {
   const app = express();
@@ -26,6 +28,8 @@ export const createApp = () => {
   app.use('/api/auth', authRouter);
   app.use('/api/categories', categoriesRouter);
   app.use('/api/transactions', transactionsRouter);
+  app.use('/api/budgets', budgetsRouter);
+  app.use('/api/reports', reportsRouter);
 
   // 404 handler
   app.use((_req, res) => {
