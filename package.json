@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
     "backend": "npm run dev -w @finance-tracker/backend",
     "backend:build": "npm run build -w @finance-tracker/backend",
     "backend:start": "npm run start -w @finance-tracker/backend",
