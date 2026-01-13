@@ -8,6 +8,9 @@
   "scripts": {
     "backend": "npm run dev -w @finance-tracker/backend",
     "backend:build": "npm run build -w @finance-tracker/backend",
-    "backend:start": "npm run start -w @finance-tracker/backend"
+    "backend:start": "npm run start -w @finance-tracker/backend",
+    "frontend": "npm run dev -w @finance-tracker/frontend",
+    "frontend:build": "npm run build -w @finance-tracker/frontend",
+    "frontend:preview": "npm run preview -w @finance-tracker/frontend"
   }
 }
