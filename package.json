@@ -12,5 +12,8 @@
     "frontend": "npm run dev -w @finance-tracker/frontend",
     "frontend:build": "npm run build -w @finance-tracker/frontend",
     "frontend:preview": "npm run preview -w @finance-tracker/frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
