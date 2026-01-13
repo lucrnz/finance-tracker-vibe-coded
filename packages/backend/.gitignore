@@ -5,10 +5,6 @@ node_modules/
 dist/
 
 # Environment files
-packages/**/.env
-packages/**/.env.*
-!packages/**/.env*.example
-
 .env
 .env.*
 !.env*.example
@@ -16,6 +12,9 @@ packages/**/.env.*
 # Database
 *.db
 *.db-journal
+
+prisma/*.db
+prisma/*.db-journal
 
 # IDE
 .vscode/
