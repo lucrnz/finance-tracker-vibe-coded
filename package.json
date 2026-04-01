@@ -16,5 +16,16 @@
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
+  },
+  "overrides": {
+    "flat-cache": {
+      "flatted": "3.4.2"
+    },
+    "minimatch@3": {
+      "brace-expansion": "1.1.13"
+    },
+    "picomatch": "4.0.4",
+    "rollup": "4.60.1",
+    "tar": "7.5.13"
   }
 }
