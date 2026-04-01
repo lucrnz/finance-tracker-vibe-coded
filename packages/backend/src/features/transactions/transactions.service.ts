@@ -190,7 +190,7 @@ export const transactionsService = {
       totalIncome,
       totalExpense,
       balance,
-      byCategory: byCategory.map((item) => ({
+      byCategory: byCategory.map((item: { category: string; type: string; _sum: { amount: number | null } }) => ({
         category: item.category,
         type: item.type,
         total: item._sum.amount ?? 0,

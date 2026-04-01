@@ -69,7 +69,7 @@ budgetsRouter.patch('/:id', validate(updateBudgetSchema), async (req, res, next)
   try {
     logger.debug('PATCH /budgets/:id', { id: req.params['id'], body: req.body });
     const input = req.body as UpdateBudgetInput;
-    const budget = await budgetsService.update(req.user!.id, req.params['id']!, input);
+    const budget = await budgetsService.update(req.user!.id, String(req.params['id']), input);
     res.json({
       success: true,
       data: budget,
@@ -84,7 +84,7 @@ budgetsRouter.put('/:id', validate(replaceBudgetSchema), async (req, res, next) 
   try {
     logger.debug('PUT /budgets/:id', { id: req.params['id'], body: req.body });
     const input = req.body as ReplaceBudgetInput;
-    const budget = await budgetsService.replace(req.user!.id, req.params['id']!, input);
+    const budget = await budgetsService.replace(req.user!.id, String(req.params['id']), input);
     res.json({
       success: true,
       data: budget,

@@ -86,7 +86,7 @@ transactionsRouter.patch('/:id', validate(updateTransactionSchema), async (req, 
   try {
     logger.debug('PATCH /transactions/:id', { id: req.params['id'], body: req.body });
     const input = req.body as UpdateTransactionInput;
-    const transaction = await transactionsService.update(req.user!.id, req.params['id']!, input);
+    const transaction = await transactionsService.update(req.user!.id, String(req.params['id']), input);
     res.json({
       success: true,
       data: transaction,
@@ -101,7 +101,7 @@ transactionsRouter.put('/:id', validate(createTransactionSchema), async (req, re
   try {
     logger.debug('PUT /transactions/:id', { id: req.params['id'], body: req.body });
     const input = req.body as CreateTransactionInput;
-    const transaction = await transactionsService.replace(req.user!.id, req.params['id']!, input);
+    const transaction = await transactionsService.replace(req.user!.id, String(req.params['id']), input);
     res.json({
       success: true,
       data: transaction,

@@ -23,7 +23,7 @@ const generateToken = (user: SafeUser): string => {
   });
 };
 
-const toSafeUser = (user: { id: string; email: string; createdAt: Date; updatedAt: Date }): SafeUser => ({
+const toSafeUser = (user: Pick<SafeUser, 'id' | 'email' | 'createdAt' | 'updatedAt'>): SafeUser => ({
   id: user.id,
   email: user.email,
   createdAt: user.createdAt,
